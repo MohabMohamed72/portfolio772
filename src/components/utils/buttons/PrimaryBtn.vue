@@ -5,6 +5,6 @@ const props = defineProps<{
 </script>
 <template>
     <button class="btn-primary">
-        {{ label }}
+        {{ props.label }}
     </button>
 </template>
