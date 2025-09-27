@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import Button from "primevue/button";
 </script>
 
 <template>
   <div>
-    <p>welcome</p>
+    <Button label="WELCOME" />
   </div>
 </template>
