@@ -4,7 +4,7 @@ const props = defineProps<{
 }>();
 </script>
 <template>
-    <button class="btn-secondary">
-        {{ label }}
-    </button>
+  <button class="btn-secondary">
+    {{ props.label }}
+  </button>
 </template>
