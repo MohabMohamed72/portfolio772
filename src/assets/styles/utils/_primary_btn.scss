@@ -1,0 +1,16 @@
+@import "../variables";
+@import "../mixins/flex";
+
+.btn-primary {
+    color: white;
+    padding: $XsSize3 $XsSize;
+    font-family: "Regular";
+    background: linear-gradient(rgb(61, 87, 217) 0%, rgb(28, 44, 163) 47.5225%, rgb(25, 38, 181) 100%) rgba(0, 0, 0, 0);
+    border-radius: $XlSize ;
+    transition: 0.5s all ease;
+    box-shadow: rgba(255, 255, 255, 0.24) 0px 0.75px 1px 0px inset, rgba(0, 0, 0, 0.6) 0px -2px 8px 0px inset, rgba(0, 0, 0, 0.6) 0px 3px 12px 0px;
+
+    &:hover {
+        background: linear-gradient(rgba(61, 87, 217, 0.644) 0%, rgba(28, 44, 163, 0.562) 47.5225%, rgba(25, 38, 181, 0.63) 100%) rgba(0, 0, 0, 0.356);
+    }
+}
