@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Button from "primevue/button";
+import Header from "./components/Layouts/Header.vue";
+import Footer from "./components/Layouts/Footer.vue";
 </script>
 
 <template>
-  <div>
-    <p class="text-[50px]">Hello</p>
-    <Button label="WELCOME" />
-  </div>
+  <!-- <Header /> -->
+  <router-view />
+  <!-- <Footer /> -->
 </template>

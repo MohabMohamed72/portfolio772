@@ -1,0 +1,69 @@
+@import "../variables";
+@import "../mixins/flex";
+
+.home-about {
+    background-image: url("../../images/background.png");
+    height: 100vh;
+    position: relative;
+    padding: calc($XlSize4 + 10px);
+    font-family: "Regular";
+
+    @media(max-width:768px) {
+    padding: $SmSize;
+
+    }
+
+    .home-about-container {
+
+        @include flex-column(nowrap, center, center);
+        gap: $XsSize;
+
+        .image-container {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            margin: auto;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+        .text-container {
+            @include flex-column(nowrap, center, center);
+            gap: $XsSize3;
+
+            .title {
+                color: white;
+                text-align: center;
+
+            }
+
+            .subtitle {
+                color: rgba(255, 255, 255, 0.6);
+                text-align: center;
+                max-width: 50%;
+
+                @media (max-width:768px) {
+                    max-width: 98%;
+                }
+            }
+        }
+
+        .home-buttons {
+            @include flex-row(nowrap, center, center);
+            gap: 20px;
+
+            @media(max-width:768px) {
+                @include flex-column(nowrap, center, center);
+
+            }
+        }
+
+    }
+}
