@@ -4,6 +4,7 @@ import Button from "primevue/button";
 
 <template>
   <div>
+    <p class="text-[50px]">Hello</p>
     <Button label="WELCOME" />
   </div>
 </template>
