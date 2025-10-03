@@ -18,6 +18,9 @@
 
     .links {
         z-index: 999;
+        @media(max-width:768px){
+            display: none;
+        }
 
         ul {
             @include flex-row(nowrap, center, center);

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Header from "./components/Layouts/Header.vue";
+import Nav from "./components/Mobile/Nav.vue";
 
 </script>
 
@@ -7,7 +8,8 @@ import Header from "./components/Layouts/Header.vue";
   <div class="pages">
     <Header />
     <router-view />
-    <div class="overlay"></div>
+    <Nav />
+    <!-- <div class="overlay"></div> -->
   </div>
   <!-- <Footer /> -->
 </template>

@@ -1,3 +1,67 @@
 @import "../variables";
 @import "../mixins/flex";
 
+.education {
+    font-family: "Regular";
+    color: $MainTextColor !important;
+
+}
+
+.experince {
+    font-family: "Regular";
+    @include flex-column(nowrap, flex-start, flex-start);
+    gap: 20px;
+
+    .experince-container {
+        @include flex-row(nowrap, flex-start, center);
+        gap: 10px;
+        color: $MainTextColor;
+
+        span {
+            @media(max-width:500px) {
+
+                width: 300px;
+            }
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+}
+
+
+.skills {
+    @include flex-row(wrap, center, center);
+    gap: 20px;
+    font-family: "Regular";
+
+    .skill {
+        @include flex-column(nowrap, center, center);
+        color: $MainTextColor ;
+
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        span {
+            color: $MainTextColor ;
+
+        }
+    }
+}
+
+.p-dialog-title {
+    color: $MainTextColor !important;
+
+}
+
+.p-dialog {
+    background-color: #0000003b !important;
+    backdrop-filter: blur(10px) !important;
+    border: none !important;
+    box-shadow: 10px 10px 10px #00000062 !important;
+}
