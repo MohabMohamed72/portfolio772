@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import SpeedDial from "primevue/speeddial";
 import { ref } from "vue";
-import { useToast } from "primevue/usetoast";
-import { useRouter } from "vue-router";
-import EducationDialog from "./Dialogs/EducationDialog.vue";
+// import { useToast } from "primevue/usetoast";
+// import { useRouter } from "vue-router";
+// import EducationDialog from "./Dialogs/EducationDialog.vue";
 
-const toast = useToast();
-const router = useRouter();
+// const toast = useToast();
+// const router = useRouter();
 const visible = ref(false);
 
 const items = ref([
@@ -45,7 +45,7 @@ const items = ref([
       />
     </div>
   </div>
-  <div>
+  <!-- <div>
     <Dialog
       v-model:visible="visible"
       modal
@@ -55,5 +55,5 @@ const items = ref([
     >
       <div class="education">aaaaaaaaa</div>
     </Dialog>
-  </div>
+  </div> -->
 </template>
