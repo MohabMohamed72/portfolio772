@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const props = defineProps<{
-  Visible: boolean;
-}>();
+// const props = defineProps<{
+//   Visible: boolean;
+// }>();
 </script>
 
 
