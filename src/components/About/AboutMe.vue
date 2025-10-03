@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import SpeedDial from "primevue/speeddial";
 import { ref } from "vue";
-// import { useToast } from "primevue/usetoast";
-// import { useRouter } from "vue-router";
 import Dialog from "primevue/dialog";
 import RightIcon from "../Icons/RightIcon.vue";
 import VueIcon from "../Icons/VueIcon.vue";
@@ -12,8 +10,6 @@ import JavascriptIcon from "../Icons/JavascriptIcon.vue";
 import ReactIcon from "../Icons/ReactIcon.vue";
 import ScssIcon from "../Icons/ScssIcon.vue";
 
-// const toast = useToast();
-// const router = useRouter();
 const visible = ref(false);
 const expvisible = ref(false);
 const skillsvisible = ref(false);
