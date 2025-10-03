@@ -1,0 +1,41 @@
+@import "../variables";
+@import "../mixins/flex";
+
+.navbar {
+    background-color: $BgColor;
+    @include flex-row(nowrap, space-between, center);
+    padding: calc($XlSize3 + 10px) $XlSize;
+    font-family: "Regular";
+    z-index: 999;
+
+    a {
+        z-index: 999;
+
+        .logo {
+            color: $MainTextColor;
+        }
+    }
+
+    .links {
+        z-index: 999;
+
+        ul {
+            @include flex-row(nowrap, center, center);
+            gap: $XlSize;
+            color: $MainTextColor;
+
+            li {
+                transition: 0.3s all linear;
+                border-radius: $XsSize2;
+                padding-block: 3px;
+
+                &:hover {
+                    background-color: $MainTextColor;
+                    color: $BgColor;
+                    padding-inline: $XsSize2;
+                    border-radius: $XsSize2;
+                }
+            }
+        }
+    }
+}

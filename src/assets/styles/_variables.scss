@@ -1,6 +1,8 @@
 :root {
   /* Light mode defaults */
   --PrimaryColor: #1d4ed8;
+  --bg-color:#1c1e23;
+  --main-text-color:#dcdde3;
   --BgWhite: rgba(255, 255, 255, 1);
   --Gray-1: rgba(248, 249, 250, 1);
   --Gray-2: rgba(241, 243, 245, 1);
@@ -93,6 +95,8 @@
 
 /*<editor-fold desc="colors">*/
 $PrimaryColor: var(--PrimaryColor);
+$BgColor: var(--bg-color);
+$MainTextColor: var(--main-text-color);
 $White: var(--BgWhite);
 $Gray-1: var(--Gray-1);
 $Gray-2: var(--Gray-2);
