@@ -52,7 +52,7 @@ const contactInfo = [
   {
     icon: '✉️',
     label: 'Email',
-    value: 'mohabmohamedd772@example.com',
+    value: 'mohabmohamedd772@gmail.com',
     color: 'blue'
   },
   {
@@ -120,7 +120,6 @@ const handleSubmit = async () => {
             <h2 class="form-title">Send a Message</h2>
             
             <form @submit.prevent="handleSubmit" class="contact-form">
-              <!-- Name Input -->
               <div class="form-group">
                 <label for="name" class="form-label">
                   <span class="label-icon">👤</span>
@@ -136,7 +135,6 @@ const handleSubmit = async () => {
                 />
               </div>
 
-              <!-- Email Input -->
               <div class="form-group">
                 <label for="email" class="form-label">
                   <span class="label-icon">✉️</span>
@@ -152,7 +150,6 @@ const handleSubmit = async () => {
                 />
               </div>
 
-              <!-- Subject Input -->
               <div class="form-group">
                 <label for="subject" class="form-label">
                   <span class="label-icon">📝</span>
@@ -168,7 +165,6 @@ const handleSubmit = async () => {
                 />
               </div>
 
-              <!-- Message Textarea -->
               <div class="form-group">
                 <label for="message" class="form-label">
                   <span class="label-icon">💭</span>
@@ -184,7 +180,6 @@ const handleSubmit = async () => {
                 ></textarea>
               </div>
 
-              <!-- Submit Button -->
               <button 
                 type="submit" 
                 class="submit-button"

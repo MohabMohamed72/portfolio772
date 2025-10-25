@@ -13,7 +13,8 @@
     }
 
     @media (max-width: 400px) {
-        padding: 40px 16px;
+        padding: 20px;
+        padding-bottom: 100px;
     }
 }
 
@@ -87,12 +88,16 @@
 }
 
 @keyframes orbFloat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0) scale(1);
     }
+
     33% {
         transform: translate(30px, -30px) scale(1.1);
     }
+
     66% {
         transform: translate(-20px, 20px) scale(0.9);
     }
@@ -101,6 +106,7 @@
         33% {
             transform: translate(15px, -15px) scale(1.05);
         }
+
         66% {
             transform: translate(-10px, 10px) scale(0.95);
         }
@@ -205,13 +211,18 @@
     }
 
     @media (max-width: 400px) {
-        gap: 24px;
+        gap: 16px;
+        width: 100%;
     }
 }
 
 // Form Section
 .form-section {
     animation: slideRight 0.8s ease 0.3s both;
+
+    @media(max-width:768px) {
+        display: none;
+    }
 }
 
 .form-card {
@@ -446,8 +457,12 @@
     }
 
     @media (max-width: 400px) {
-        padding: 20px;
-        border-radius: 18px;
+        width: 90%;
+        // margin: auto;
+    }
+    @media (max-width: 350px) {
+        // margin: auto;
+        width: 80%;
     }
 }
 
@@ -706,6 +721,7 @@
         transform: scale(0.5);
         opacity: 1;
     }
+
     100% {
         transform: scale(1);
         opacity: 0;
@@ -743,6 +759,7 @@
         opacity: 0;
         transform: translateY(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -754,6 +771,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -765,6 +783,7 @@
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -776,8 +795,32 @@
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@media (max-width: 400px) {
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-grid {
+        gap: 16px;
+        width: 100%;
+    }
+
+    .form-card,
+    .info-card {
+        // width: 100%;
+        // box-sizing: border-box;
+        // padding: 16px;
+    }
+
+    .bg-orb {
+        max-width: 80vw;
+        max-height: 80vw;
     }
 }
