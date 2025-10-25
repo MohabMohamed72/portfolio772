@@ -25,9 +25,9 @@ onMounted(() => {
       <!-- Profile image section -->
       <div class="profile-section">
         <div class="image-wrapper">
-          <div class="image-ring ring-1"></div>
+          <!-- <div class="image-ring ring-1"></div>
           <div class="image-ring ring-2"></div>
-          <div class="image-ring ring-3"></div>
+          <div class="image-ring ring-3"></div> -->
           <div class="my-image">
             <img
               src="../../assets/images/Mohab.jpg"
