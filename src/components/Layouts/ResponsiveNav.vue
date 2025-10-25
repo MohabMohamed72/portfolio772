@@ -11,8 +11,8 @@ const navItems = computed(() => [
   { path: `/`, label: "home" },
   { path: `/about`, label: "About" },
   { path: `/projects`, label: "Projects", baseRoute: false },
-  { path: `/`, label: "", baseRoute: true },
-  { path: `/contactus`, label: "ContactUs", baseRoute: true },
+  // { path: `/`, label: "", baseRoute: true },
+  { path: `/contact`, label: "Contact", baseRoute: true },
 ]);
 
 const svgPaths = [

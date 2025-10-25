@@ -15,7 +15,7 @@
       <router-link to="/projects">
         <li>Projects</li>
       </router-link>
-      <router-link to="/">
+      <router-link to="/contact">
         <li>Contact Me</li>
       </router-link>
     </ul>
