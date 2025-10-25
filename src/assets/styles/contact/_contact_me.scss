@@ -11,6 +11,10 @@
     @media (max-width: 768px) {
         padding: 60px 20px;
     }
+
+    @media (max-width: 400px) {
+        padding: 40px 16px;
+    }
 }
 
 // Animated background
@@ -28,6 +32,13 @@
     height: 500px;
     background: radial-gradient(circle, rgba(59, 130, 246, 0.2), transparent);
     animation-delay: 0s;
+
+    @media (max-width: 400px) {
+        width: 300px;
+        height: 300px;
+        left: 5%;
+        top: 5%;
+    }
 }
 
 .orb-2 {
@@ -37,6 +48,13 @@
     height: 400px;
     background: radial-gradient(circle, rgba(168, 85, 247, 0.15), transparent);
     animation-delay: 7s;
+
+    @media (max-width: 400px) {
+        width: 250px;
+        height: 250px;
+        right: 5%;
+        top: 45%;
+    }
 }
 
 .orb-3 {
@@ -46,6 +64,13 @@
     height: 450px;
     background: radial-gradient(circle, rgba(16, 185, 129, 0.15), transparent);
     animation-delay: 14s;
+
+    @media (max-width: 400px) {
+        width: 280px;
+        height: 280px;
+        left: 20%;
+        bottom: 5%;
+    }
 }
 
 .bg-grid {
@@ -55,21 +80,30 @@
         linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 50px 50px;
+
+    @media (max-width: 400px) {
+        background-size: 30px 30px;
+    }
 }
 
 @keyframes orbFloat {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: translate(0, 0) scale(1);
     }
-
     33% {
         transform: translate(30px, -30px) scale(1.1);
     }
-
     66% {
         transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    @ atmedia (max-width: 400px) {
+        33% {
+            transform: translate(15px, -15px) scale(1.05);
+        }
+        66% {
+            transform: translate(-10px, 10px) scale(0.95);
+        }
     }
 }
 
@@ -79,7 +113,6 @@
     z-index: 1;
     max-width: 1400px;
     margin: 0 auto;
-
 }
 
 // Header
@@ -90,6 +123,10 @@
 
     @media (max-width: 768px) {
         margin-bottom: 40px;
+    }
+
+    @media (max-width: 400px) {
+        margin-bottom: 32px;
     }
 }
 
@@ -113,6 +150,19 @@
         font-weight: 600;
         color: rgba(255, 255, 255, 0.9);
     }
+
+    @media (max-width: 400px) {
+        padding: 6px 14px;
+        gap: 6px;
+
+        .badge-icon {
+            font-size: 1.1rem;
+        }
+
+        .badge-text {
+            font-size: 0.8rem;
+        }
+    }
 }
 
 .contact-title {
@@ -124,6 +174,10 @@
     background-clip: text;
     margin: 0 0 20px 0;
     letter-spacing: -1px;
+
+    @media (max-width: 400px) {
+        letter-spacing: -0.5px;
+    }
 }
 
 .contact-subtitle {
@@ -132,6 +186,11 @@
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.7;
+
+    @media (max-width: 400px) {
+        font-size: 1rem;
+        padding: 0 8px;
+    }
 }
 
 // Main Grid
@@ -143,6 +202,10 @@
 
     @media (max-width: 1024px) {
         grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 400px) {
+        gap: 24px;
     }
 }
 
@@ -164,7 +227,8 @@
     }
 
     @media (max-width: 400px) {
-        margin-right: 70px;
+        padding: 20px;
+        border-radius: 18px;
     }
 }
 
@@ -173,12 +237,21 @@
     font-weight: 700;
     color: #fff;
     margin: 0 0 32px 0;
+
+    @media (max-width: 400px) {
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+    }
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @media (max-width: 400px) {
+        gap: 18px;
+    }
 }
 
 .form-group {
@@ -197,6 +270,15 @@
 
     .label-icon {
         font-size: 1.1rem;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 0.875rem;
+        gap: 6px;
+
+        .label-icon {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -222,11 +304,21 @@
         border-color: rgba(59, 130, 246, 0.5);
         box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
     }
+
+    @media (max-width: 400px) {
+        padding: 12px 14px;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
 }
 
 .form-textarea {
     resize: vertical;
     min-height: 120px;
+
+    @media (max-width: 400px) {
+        min-height: 100px;
+    }
 }
 
 .submit-button {
@@ -293,6 +385,17 @@
         opacity: 0.7;
         cursor: not-allowed;
     }
+
+    @media (max-width: 400px) {
+        padding: 14px 24px;
+        font-size: 0.95rem;
+        border-radius: 10px;
+
+        .button-icon {
+            width: 18px;
+            height: 18px;
+        }
+    }
 }
 
 .spinner {
@@ -302,6 +405,12 @@
     border-top-color: #fff;
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
+
+    @media (max-width: 400px) {
+        width: 18px;
+        height: 18px;
+        border-width: 2px;
+    }
 }
 
 @keyframes spin {
@@ -316,6 +425,10 @@
     flex-direction: column;
     gap: 24px;
     animation: slideLeft 0.8s ease 0.4s both;
+
+    @media (max-width: 400px) {
+        gap: 18px;
+    }
 }
 
 .info-card,
@@ -333,7 +446,8 @@
     }
 
     @media (max-width: 400px) {
-        margin-right: 80px;
+        padding: 20px;
+        border-radius: 18px;
     }
 }
 
@@ -343,12 +457,21 @@
     font-weight: 700;
     color: #fff;
     margin: 0 0 24px 0;
+
+    @media (max-width: 400px) {
+        font-size: 1.15rem;
+        margin-bottom: 18px;
+    }
 }
 
 .info-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (max-width: 400px) {
+        gap: 16px;
+    }
 }
 
 .info-item {
@@ -357,6 +480,10 @@
     gap: 16px;
     opacity: 0;
     animation: fadeInUp 0.6s ease var(--delay) forwards;
+
+    @media (max-width: 400px) {
+        gap: 12px;
+    }
 }
 
 .info-icon {
@@ -384,6 +511,13 @@
     &.icon-orange {
         background: rgba(249, 115, 22, 0.1);
     }
+
+    @media (max-width: 400px) {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+        border-radius: 10px;
+    }
 }
 
 .info-content {
@@ -394,6 +528,10 @@
     font-size: 0.875rem;
     color: rgba(255, 255, 255, 0.6);
     margin: 0 0 4px 0;
+
+    @media (max-width: 400px) {
+        font-size: 0.8rem;
+    }
 }
 
 .info-value {
@@ -401,6 +539,10 @@
     font-weight: 600;
     color: #fff;
     margin: 0;
+
+    @media (max-width: 400px) {
+        font-size: 0.95rem;
+    }
 }
 
 // Social Links
@@ -408,6 +550,10 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    @media (max-width: 400px) {
+        gap: 10px;
+    }
 }
 
 .social-link {
@@ -432,6 +578,16 @@
             transform: translate(4px, -4px);
         }
     }
+
+    @media (max-width: 400px) {
+        padding: 12px;
+        gap: 10px;
+        border-radius: 12px;
+
+        &:hover {
+            transform: translateX(4px);
+        }
+    }
 }
 
 .social-icon {
@@ -443,6 +599,13 @@
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     font-size: 1.25rem;
+
+    @media (max-width: 400px) {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+        border-radius: 8px;
+    }
 }
 
 .social-content {
@@ -454,12 +617,20 @@
     font-weight: 600;
     color: #fff;
     margin: 0 0 2px 0;
+
+    @media (max-width: 400px) {
+        font-size: 0.95rem;
+    }
 }
 
 .social-handle {
     font-size: 0.875rem;
     color: rgba(255, 255, 255, 0.6);
     margin: 0;
+
+    @media (max-width: 400px) {
+        font-size: 0.8rem;
+    }
 }
 
 .social-arrow {
@@ -467,6 +638,11 @@
     height: 20px;
     color: rgba(255, 255, 255, 0.4);
     transition: transform 0.3s ease;
+
+    @media (max-width: 400px) {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 // Availability
@@ -476,6 +652,10 @@
     gap: 16px;
     background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(6, 182, 212, 0.1));
     border-color: rgba(16, 185, 129, 0.2);
+
+    @media (max-width: 400px) {
+        gap: 12px;
+    }
 }
 
 .availability-pulse {
@@ -485,6 +665,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 400px) {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .pulse-dot {
@@ -494,6 +679,11 @@
     border-radius: 50%;
     position: relative;
     z-index: 1;
+
+    @media (max-width: 400px) {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 .pulse-ring {
@@ -503,6 +693,12 @@
     border: 2px solid #10b981;
     border-radius: 50%;
     animation: pulseRing 2s ease-out infinite;
+
+    @media (max-width: 400px) {
+        width: 40px;
+        height: 40px;
+        border-width: 1.5px;
+    }
 }
 
 @keyframes pulseRing {
@@ -510,7 +706,6 @@
         transform: scale(0.5);
         opacity: 1;
     }
-
     100% {
         transform: scale(1);
         opacity: 0;
@@ -526,12 +721,20 @@
     font-weight: 700;
     color: #10b981;
     margin: 0 0 4px 0;
+
+    @media (max-width: 400px) {
+        font-size: 0.95rem;
+    }
 }
 
 .availability-text {
     font-size: 0.875rem;
     color: rgba(255, 255, 255, 0.7);
     margin: 0;
+
+    @media (max-width: 400px) {
+        font-size: 0.8rem;
+    }
 }
 
 // Animations
@@ -540,7 +743,6 @@
         opacity: 0;
         transform: translateY(-30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -552,7 +754,6 @@
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -564,7 +765,6 @@
         opacity: 0;
         transform: translateX(-30px);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
@@ -576,7 +776,6 @@
         opacity: 0;
         transform: translateX(30px);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
