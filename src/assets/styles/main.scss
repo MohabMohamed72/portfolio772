@@ -1,8 +1,7 @@
-@import "./variables";
 @import "./fonts";
 @import "./normalize";
+@import "./variables";
+@import "./Layouts/imports";
 @import "./Home/imports";
-@import "./utils/imports";
-@import "./layouts/imports";
-@import "./utils/container";
-@import "./About/imports";
+@import "./projects/imports";
+@import "./About/improts";

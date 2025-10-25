@@ -1,44 +1,43 @@
 @import "../variables";
 @import "../mixins/flex";
 
-.navbar {
-    background-color: $BgColor;
+.navbar-container {
+    width: 100%;
+    padding: 20px;
+    background-color: $PrimaryColor;
     @include flex-row(nowrap, space-between, center);
-    padding: calc($XlSize3 + 10px) $XlSize;
     font-family: "Regular";
-    z-index: 999;
 
-    a {
-        z-index: 999;
-
-        .logo {
-            color: $MainTextColor;
-        }
+    .title {
+        color: $TextColor;
+        font-size: $XlSize2;
+        font-weight: $BaseFontSemiBoldWeight;
     }
 
-    .links {
-        z-index: 999;
-        @media(max-width:768px){
+    ul {
+        @include flex-row(nowrap, center, center);
+        gap: $XlSize;
+        color: $TextColor;
+
+        @media(max-width:768px) {
             display: none;
         }
 
-        ul {
-            @include flex-row(nowrap, center, center);
-            gap: $XlSize;
-            color: $MainTextColor;
+        li {
+            transition: $Transition;
+            border-radius: $XsSize;
 
-            li {
-                transition: 0.3s all linear;
-                border-radius: $XsSize2;
-                padding-block: 3px;
-
-                &:hover {
-                    background-color: $MainTextColor;
-                    color: $BgColor;
-                    padding-inline: $XsSize2;
-                    border-radius: $XsSize2;
-                }
+            &:hover {
+                background-color: $TextColor;
+                color: $PrimaryColor;
+                padding-inline: $XsSize3;
             }
+        }
+    }
+
+    .mobile-nav{
+        @media (min-width:768px) {
+                display: none;
         }
     }
 }

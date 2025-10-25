@@ -1,0 +1,110 @@
+@import "../variables";
+
+.navigation {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .navigation {
+        width: 100%;
+        height: 70px;
+        background: $ThirdColor;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        z-index: 55555;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation ul {
+        display: flex;
+        width: 350px;
+        position: relative;
+    }
+
+    .navigation ul li {
+        list-style: none;
+        width: 100%;
+        height: 70px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .navigation ul li a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+        text-align: center;
+        position: relative;
+    }
+
+    .navigation ul li a .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 1.5em;
+        color: $TextColor;
+        transition: 0.5s;
+
+    }
+
+    .navigation ul li.active a .icon {
+        transform: translate(4px, -33px);
+        background-color: $PrimaryColor;
+        border-radius: 50%;
+        box-shadow: 0 3px 4px #0000008c;
+
+        svg {
+            fill: $TextColor;
+
+            path {
+                fill: $TextColor;
+
+            }
+        }
+    }
+
+    .navigation ul li a .text {
+        position: absolute;
+        bottom: 8px;
+        font-size: var(--font-size-sm);
+        color: var(--black-color);
+        font-weight: 500;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 0.5s;
+        font-family: "Regular", sans-serif;
+        letter-spacing: 0.05em;
+    }
+
+    .navigation ul li.active a .text {
+        opacity: 1;
+        transform: translateY(0);
+        margin-left: 11px;
+        color: $TextColor;
+    }
+
+    .indicator {
+        position: absolute;
+        top: -30px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--secondary-color);
+        border: 6px solid transparent;
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+    }
+}

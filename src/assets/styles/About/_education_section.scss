@@ -1,0 +1,241 @@
+@import "../variables";
+
+.educations-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.educations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0;
+  }
+}
+
+.education-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 2px;
+    background: linear-gradient(135deg,
+        var(--gradient-from),
+        var(--gradient-to));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  &:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow:
+      0 30px 60px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+
+    &::before {
+      opacity: 0.6;
+    }
+
+    .icon-badge {
+      transform: scale(1.1) rotate(10deg);
+    }
+
+    .badge-glow {
+      opacity: 0.8;
+      transform: scale(1.6);
+    }
+
+    .degree-underline {
+      width: 100%;
+    }
+
+    .card-shimmer {
+      animation: shimmer 2s ease-in-out infinite;
+    }
+
+    .timeline-dot {
+      transform: scale(1.3);
+      box-shadow: 0 0 20px var(--gradient-from);
+    }
+  }
+}
+
+.card-header {
+  position: relative;
+  padding: 32px 32px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 480px) {
+    padding: 24px 24px 16px;
+  }
+}
+
+.icon-badge {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+
+  .icon {
+    font-size: 36px;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+  }
+
+  .badge-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    opacity: 0;
+    filter: blur(20px);
+    transition: all 0.5s ease;
+  }
+
+  &.badge-blue .badge-glow {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  }
+
+  &.badge-purple .badge-glow {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+  }
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gradient-from), var(--gradient-to));
+  box-shadow: 0 0 12px var(--gradient-from);
+  transition: all 0.4s ease;
+}
+
+.card-body {
+  padding: 0 32px 32px;
+
+  @media (max-width: 480px) {
+    padding: 0 24px 24px;
+  }
+}
+
+.degree-section {
+  margin-bottom: 20px;
+}
+
+.degree {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+
+  @media (max-width: 480px) {
+    font-size: 1.25rem;
+  }
+}
+
+.degree-underline {
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(90deg, var(--gradient-from), var(--gradient-to));
+  border-radius: 2px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.institution-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  .university,
+  .duration {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .university-icon,
+  .duration-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+.card-gradient-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gradient-from), var(--gradient-to));
+  opacity: 0.5;
+}
+
+.card-shimmer {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.08) 50%,
+      transparent 70%);
+  transform: translateX(-100%) translateY(-100%);
+  animation-play-state: paused;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
