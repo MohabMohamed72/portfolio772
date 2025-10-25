@@ -79,6 +79,7 @@
     z-index: 1;
     max-width: 1400px;
     margin: 0 auto;
+
 }
 
 // Header
@@ -160,6 +161,10 @@
 
     @media (max-width: 768px) {
         padding: 24px;
+    }
+
+    @media (max-width: 400px) {
+        margin-right: 70px;
     }
 }
 
@@ -325,6 +330,10 @@
 
     @media (max-width: 768px) {
         padding: 24px;
+    }
+
+    @media (max-width: 400px) {
+        margin-right: 80px;
     }
 }
 
