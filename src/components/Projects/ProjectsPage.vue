@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import SwiperSection from "../Swiper/SwiperSection.vue";
-import type { ProjectInterface } from "../../types/projectsInterface";
+  import type { ProjectInterface } from "../../types/projectsInterface";
 import ProjectCard from "./ProjectCard.vue";
 import ORBIT from "../../assets/images/ORBIT.png";
 import HSE from "../../assets/images/HSE.png";

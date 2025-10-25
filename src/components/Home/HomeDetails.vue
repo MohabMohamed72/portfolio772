@@ -9,9 +9,7 @@ onMounted(() => {
   }, 100);
 });
 
-const scrollToProjects = () => {
-  // You can emit an event or use router
-};
+
 </script>
 
 <template>
